@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air University - A Societal Mission & Campus News</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    /* Header Styles */
+    header {
+      background-color: #2E2E2E;
+      color: #FFFFFF;
+      padding: 10px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      margin-right: 20px;
+    }
+    nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    /* Hero Section Styles */
+    .hero {
+      background-image: url(https://www.stanford.edu/wp-content/uploads/2023/10/Hero-3-2-2048x1362.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      
+    background-attachment: fixed;
+      justify-content: center;
+      align-items: center;
+      color: #FFFFFF;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      width: 100vw;
+    }
+    .hero h1 {
+      font-size: 70px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .hero .btn {
+      background-color: #BD0000;
+      color: #FFFFFF;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      margin-right: 30%;
+    }
+    /* Mission Statement Styles */
+    main {
+      padding: 40px 80px;
+    }
+    .mission-statement {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .mission-statement h1 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .mission-statement p {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    .mission-statement .more-btn {
+      background-color: #BD0000;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    /* Campus News Styles */
+    .campus-news {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      padding: 20px 80px;
+    }
+    .news-item {
+      display: flex;
+      flex-direction: column;
+      background-color: #F2F2F2;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .news-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .news-item h2 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .news-item p {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+    /* Making the first and last news items span two columns */
+    .news-item:first-child {
+      grid-column: span 2;
+    }
+    .news-item:last-child {
+      grid-column: span 2;
+    }
+    /* Academics Section */
+    .academics-container {
+      padding: 40px;
+    }
+    .academics-section h2 {
+      
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .academics-section p {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-bottom: 40px;
+    }
+    .academics-items {
+      display: flex;
+      justify-content: space-between;
+    }
+    .academics-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 30%;
+    }
+    .academics-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .academics-item h2 {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .academics-item p {
+      font-size: 14px;
+      color: #555;
+    }
+    .academics-item a {
+      color: blue;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .academic-areas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 0;
+    }
+    .academic-areas a {
+      color: #0072C6;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+    }
+    .academic-areas div {
+      margin-top: 10px;
+      /* Adjusts space between heading and links */
+    }
+    .more-about-academics {
+      background-color: #B00000;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      display: block;
+      margin: 40px auto;
+    }
+    .research-section {
+      background-color: #B00000;
+      color: #FFFFFF;
+      padding: 40px;
+      text-align: center;
+    }
+    .research-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .research-section p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+    .research-stats {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .research-stat {
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      width: 30%;
+      margin: 0 20px;
+    }
+    .research-stat h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #B00000;
+    }
+    .research-stat p {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    .more-btn {
+      background-color: #FFFFFF;
+      color: #B00000;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    /* Big Overlay*/
+    .img-section {
+      position: relative;
+      padding: 40px 0;
+    }
+    .big-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .big-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .big-card img {
+      width: 100%;
+      height: auto;
+      /* Maintain aspect ratio */
+      display: block;
+      object-fit: cover;
+    }
+    .big-card:hover .overlay {
+      opacity: 1;
+    }
+    .overlay h5 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .overlay p {
+      font-size: 16px;
+      text-align: center;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+    .btn-light {
+      background-color: #fff;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    footer {
+      background-color: #B00000;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .event-section {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+.event-section h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #343a40;
+}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+.card-horizontal:hover {
+  transform: translateY(-5px);
+}
+.card-horizontal .card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.card-horizontal .card-body {
+  padding: 1.25rem;
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.card-text {
+  color: #6c757d;
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">Air University</div>
+      <ul>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Health Care</a></li>
+        <li><a href="#">Campus Life</a></li>
+        <li><a href="#">Admission</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div>
+      <h1>Air University</h1>
+      <button  class="btn ">Explore Air</button>
+    </div>
+  </div>
+  <!-- Mission Statement Section -->
+  <main>
+    <section id="mission" class="mission-statement">
+      <h1>A Societal Mission</h1>
+      <p>Air University was founded with a commitment to societal purpose. Our mission is to prepare students for
+        impactful leadership, foster knowledge, and advance creativity. We aim to lead in research that addresses global
+        challenges and promotes sustainable development.</p>
+      <p>By emphasizing integrity, responsibility, and academic excellence, Air University seeks to contribute
+        positively to communities locally and globally.</p>
+      <button class="more-btn">More About Air</button>
+    </section>
+    <!-- Campus News Section -->
+    <section class="campus-news">
+      <div class="news-item">
+        <img
+          src="https://news.stanford.edu/__data/assets/image/0022/161473/A-woman-and-children-in-an-Indian-farm-field.-credit_EqualStock-_-Unsplash.jpg"
+          alt="Health and Medicine">
+        <h2>Air University launches center focused on human and planetary health</h2>
+        <p>HEALTH & MEDICINE</p>
+      </div>
+      <div class="news-item">
+        <img
+          src="https://news.stanford.edu/__data/assets/image/0029/161399/photo-key-Lester-Unraveling20the20Spiderweb20of20Partnerships20Americans20Use20to20Evade20Taxes.jpg.webp"
+          alt="Business">
+        <h2>Mapping the maze where the IRS could find billions in unpaid taxes</h2>
+        <p>BUSINESS</p>
+      </div>
+      <div class="news-item">
+        <img
+          src="https://news.stanford.edu/__data/assets/image/0020/161345/20240814_Office_Objects_with_Nate_Persily-_95A1019_-big-grin.jpg"
+          alt="Law">
+        <h2>Nate Persily's mini museum of election history</h2>
+        <p>LAW</p>
+      </div>
+      <div class="news-item">
+        <img src="https://news.stanford.edu/__data/assets/image/0019/161533/20201103_Vote11.jpg" alt="Social Sciences">
+        <h2>Six things political scientists are watching this election</h2>
+        <p>SOCIAL SCIENCES</p>
+      </div>
+      <div class="news-item">
+        <img
+          src="https://news.stanford.edu/__data/assets/image/0028/161488/20240829_roar_emcapistranoabreu_diegolima-004.jpg"
+          alt="Education">
+        <h2>Study reveals disparities in Brazilian schools</h2>
+        <p>EDUCATION</p>
+      </div>
+      <div class="news-item">
+        <img src="https://news.stanford.edu/__data/assets/image/0023/160835/Amulets-crane-AS.JPG" alt="Arts">
+        <h2>Meyer Green welcomes 'Amulets'</h2>
+        <p>ARTS</p>
+      </div>
+    </section>
+    <!-- Academics Section -->
+    <section class="academics-container">
+      <h2 style="text-align: center;">Academics</h2>
+      <p>At Air University, we offer a diverse range of academic programs that cater to the evolving needs of our
+        students and the global community. From undergraduate to graduate studies, our curriculum is designed to foster
+        intellectual growth, practical skills, and a commitment to making a positive impact.</p>
+      <div class="academics-items">
+        <div class="academics-item">
+          <img src="https://www.stanford.edu/wp-content/uploads/2023/05/20230418_Grayson_Armour_95A0681-2.jpg"
+            alt="Undergraduate Education">
+          <h2>Undergraduate Education</h2>
+          <p>Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise</p>
+          <a href="#">Undergraduate Education ></a>
+        </div>
+        <div class="academics-item">
+          <img
+            src="https://www.stanford.edu/wp-content/uploads/2023/03/20220714Hopkins_Marine_Station_N6A7270-1-2048x1366.jpg"
+            alt="Graduate Education">
+          <h2>Graduate Education</h2>
+          <p>Unsurpassed opportunities to participate in the advancement of entire fields of knowledge</p>
+          <a href="#">Graduate education ></a>
+        </div>
+        <div class="academics-item">
+          <img src="https://www.stanford.edu/wp-content/uploads/2023/03/20211117_Elizabeth_Reese_N6A0441-2048x1366.jpg"
+            alt="Driving Impact">
+          <h2>Driving Impact</h2>
+          <p>Continuing adult education, executive and professional programs, and programs for K-12 students</p>
+          <a href="#">Lifelong Learning ></a>
+        </div>
+      </div>
+    </section>
+    <!-- Research Section -->
+    <section class="research-section">
+      <h2>Driving Discoveries Vital to Our World, Our Health, and Our Intellectual Life</h2>
+      <p>At Air University, we are passionate about research that propels our understanding and shapes a better future.
+      </p>
+      <div class="research-stats">
+        <div class="research-stat">
+          <h3>15 Institutes</h3>
+          <p>cross disciplinary boundaries</p>
+        </div>
+        <div class="research-stat">
+          <h3>20 Libraries</h3>
+          <p>hold over 12 million items</p>
+        </div>
+        <div class="research-stat">
+          <h3>$1.98 Billion</h3>
+          <p>sponsored research budget</p>
+        </div>
+      </div>
+      <button class="more-btn">More about research</button>
+    </section>
+    <!-- "Seven schools in which to pursue your passions" Section -->
+    <section class="academic-areas">
+      <h1 style="font-weight: bold;">Seven schools in which to pursue your passion</h1>
+      <div>
+        <a href="#"style="color:#BD0000;">Medicine</a> |
+        <a href="#"style="color:#BD0000;">Law</a> |
+        <a href="#"style="color:#BD0000;">Engineering</a> |
+        <a href="#"style="color:#BD0000;">Business</a> |
+        <a href="#"style="color:#BD0000;">Education</a> |
+        <a href="#"style="color:#BD0000;">Humanities & Sciences</a> |
+        <a href="#"style="color:#BD0000;">Earth & Energy</a>
+      </div>
+      <button class="more-about-academics">More About Academics</button>
+    </section>
+    <!-- Big Overlay Card Section -->
+    <section id="Vision" class="img-section" style="background-color: #333;">
+      <div class="container" style="background-color: #555;">
+        <div class="card big-card">
+          <img src="https://www.stanford.edu/wp-content/uploads/2024/08/Tadashi-homesite.jpg" class="card-img img"
+            alt="Big Overlay Image">
+          <div class="overlay">
+            <h5>Vision</h5>
+            <p>Think a hundred times before you take a decision, but once that decision is taken, stand by it as one
+              man.</p>
+            <a href="index.html" class="btn btn-light">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="event" class="event-section">
+      <h1>Upcoming Events</h1>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card-horizontal">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="https://th.bing.com/th/id/R.d756a66948c11a74fd37121a6e419e4c?rik=BxZA83CurOUPPw&riu=http%3a%2f%2fwww.bbc.co.uk%2fblogs%2flearningenglish%2fcricket_getty.jpg&ehk=J1s3rQ1P5Ih%2bb1oVfaXKecB9lATRYtuKQhLcjsZqDZA%3d&risl=&pid=ImgRaw&r=0" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color: #B00000;">Sports week</h5>
+                    <p class="card-text">08 november marks the dates.</p>
+                    <a href="#" class="btn btn-primary" style="color: #BD0000;">view more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card-horizontal">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="https://www.researchgate.net/profile/Limin-Wang-22/publication/275897285/figure/fig2/AS:294647306964995@1447260800513/Samples-of-cultural-event-recognition-dataset-at-the-ChaLearn-LAP-challenge-2015-The.png" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color:#BD0000;">Air nexus</h5>
+                    <p class="card-text">22 nov is the date.</p>
+                    <a href="#" class="btn btn-primary"style="color: #BD0000;">register here</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card-horizontal">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="https://www.kindpng.com/picc/m/638-6385644_air-university-islamabad-logo-clipart-png-download-air.png" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color: #BD0000;">MOU</h5>
+                    <p class="card-text">study in italy.</p>
+                    <a href="#" class="btn btn-primary"style="color: #BD0000;">view more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Air University. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a>
+    </p>
+  </footer>
+</body>
+</html>
