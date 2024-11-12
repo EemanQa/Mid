@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
       padding: 0;
       overflow-x: hidden;
     }
+
     /* Header Styles */
     header {
       background-color: #2E2E2E;
@@ -21,26 +23,35 @@
       justify-content: space-between;
       align-items: center;
       position: fixed;
+      /* Keep the navbar fixed */
       width: 100%;
+      z-index: 1000;
+      /* Higher z-index to ensure it is on top */
     }
+
     .logo {
       font-size: 26px;
       font-weight: bold;
     }
+
     nav ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       display: flex;
     }
+
     nav li {
       margin-right: 20px;
     }
+
     nav a {
       color: #FFFFFF;
       text-decoration: none;
       font-size: 18px;
     }
+
+
     /* Hero Section Styles */
     .hero {
       background-image: url(https://www.stanford.edu/wp-content/uploads/2023/10/Hero-3-2-2048x1362.jpg);
@@ -48,19 +59,21 @@
       background-position: center;
       height: 100vh;
       display: flex;
-      
-    background-attachment: fixed;
+
+      background-attachment: fixed;
       justify-content: center;
       align-items: center;
       color: #FFFFFF;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       width: 100vw;
     }
+
     .hero h1 {
       font-size: 70px;
       font-weight: bold;
       margin-bottom: 20px;
     }
+
     .hero .btn {
       background-color: #BD0000;
       color: #FFFFFF;
@@ -71,25 +84,30 @@
       cursor: pointer;
       margin-right: 30%;
     }
+
     /* Mission Statement Styles */
     main {
       padding: 40px 80px;
     }
+
     .mission-statement {
       text-align: center;
       margin-bottom: 40px;
     }
+
     .mission-statement h1 {
       font-size: 40px;
       font-weight: bold;
       margin-bottom: 20px;
     }
+
     .mission-statement p {
       font-size: 20px;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto 20px;
     }
+
     .mission-statement .more-btn {
       background-color: #BD0000;
       color: #FFFFFF;
@@ -99,6 +117,7 @@
       font-size: 18px;
       cursor: pointer;
     }
+
     /* Campus News Styles */
     .campus-news {
       display: grid;
@@ -106,6 +125,7 @@
       grid-gap: 20px;
       padding: 20px 80px;
     }
+
     .news-item {
       display: flex;
       flex-direction: column;
@@ -113,48 +133,58 @@
       padding: 10px;
       border-radius: 5px;
     }
+
     .news-item img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 5px;
     }
+
     .news-item h2 {
       margin-top: 10px;
       font-size: 18px;
     }
+
     .news-item p {
       margin-top: 5px;
       font-size: 14px;
       color: #555;
     }
+
     /* Making the first and last news items span two columns */
     .news-item:first-child {
       grid-column: span 2;
     }
+
     .news-item:last-child {
       grid-column: span 2;
     }
+
     /* Academics Section */
     .academics-container {
       padding: 40px;
     }
+
     .academics-section h2 {
-      
+
       font-size: 36px;
       font-weight: bold;
       margin-bottom: 20px;
     }
+
     .academics-section p {
       font-size: 20px;
       line-height: 1.6;
       max-width: 800px;
       margin-bottom: 40px;
     }
+
     .academics-items {
       display: flex;
       justify-content: space-between;
     }
+
     .academics-item {
       display: flex;
       flex-direction: column;
@@ -162,6 +192,7 @@
       text-align: center;
       width: 30%;
     }
+
     .academics-item img {
       width: 100%;
       height: 200px;
@@ -169,15 +200,18 @@
       border-radius: 5px;
       margin-bottom: 10px;
     }
+
     .academics-item h2 {
       font-weight: bold;
       font-size: 18px;
       margin-bottom: 5px;
     }
+
     .academics-item p {
       font-size: 14px;
       color: #555;
     }
+
     .academics-item a {
       color: blue;
       text-decoration: none;
@@ -191,16 +225,19 @@
       align-items: center;
       margin: 40px 0;
     }
+
     .academic-areas a {
       color: #0072C6;
       text-decoration: none;
       margin: 0 20px;
       font-size: 18px;
     }
+
     .academic-areas div {
       margin-top: 10px;
       /* Adjusts space between heading and links */
     }
+
     .more-about-academics {
       background-color: #B00000;
       color: #FFFFFF;
@@ -212,25 +249,30 @@
       display: block;
       margin: 40px auto;
     }
+
     .research-section {
       background-color: #B00000;
       color: #FFFFFF;
       padding: 40px;
       text-align: center;
     }
+
     .research-section h2 {
       font-size: 28px;
       margin-bottom: 20px;
     }
+
     .research-section p {
       font-size: 18px;
       margin-bottom: 40px;
     }
+
     .research-stats {
       display: flex;
       justify-content: center;
       margin-bottom: 40px;
     }
+
     .research-stat {
       background-color: #FFFFFF;
       border-radius: 5px;
@@ -240,15 +282,18 @@
       width: 30%;
       margin: 0 20px;
     }
+
     .research-stat h3 {
       font-size: 24px;
       margin-bottom: 10px;
       color: #B00000;
     }
+
     .research-stat p {
       font-size: 16px;
       margin-bottom: 0;
     }
+
     .more-btn {
       background-color: #FFFFFF;
       color: #B00000;
@@ -258,57 +303,66 @@
       font-size: 18px;
       cursor: pointer;
     }
+
     /* Big Overlay*/
+    /* General Styles for the Section */
+    /* General Styles for the Section */
     .img-section {
+      margin-top: 80px;
+      /* Adjust this value to match or exceed the height of your navbar */
+      padding: 20px 0;
+      /* Optional padding for better spacing */
       position: relative;
-      padding: 40px 0;
+      /* Helps in positioning child elements */
     }
-    .big-card {
+
+    .card {
       position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Ensures correct positioning of the overlay */
     }
-    .big-card img {
+
+    .card-img {
       width: 100%;
+      /* Ensure the image is responsive */
       height: auto;
-      display: block;
+      /* Maintain aspect ratio */
     }
+
     .overlay {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.6);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Semi-transparent background */
       color: white;
+      /* Text color for overlay */
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-    .big-card img {
-      width: 100%;
-      height: auto;
-      /* Maintain aspect ratio */
-      display: block;
-      object-fit: cover;
-    }
-    .big-card:hover .overlay {
+
+    .card:hover .overlay {
       opacity: 1;
+      /* Show overlay on hover */
     }
+
     .overlay h5 {
       font-size: 24px;
       margin-bottom: 10px;
     }
+
     .overlay p {
       font-size: 16px;
       text-align: center;
       max-width: 300px;
       margin-bottom: 20px;
     }
+
     .btn-light {
       background-color: #fff;
       color: #333;
@@ -318,53 +372,96 @@
       text-decoration: none;
       font-size: 16px;
     }
+
     footer {
       background-color: #B00000;
       color: #FFFFFF;
       text-align: center;
       padding: 20px;
     }
+
     footer a {
       color: #FFFFFF;
       text-decoration: none;
       font-size: 18px;
     }
-    .event-section {
-  padding: 2rem 0;
-  background-color: #f8f9fa;
+
+   .events-section {
+    padding-top: 40px; /* Adjust the value as needed */
+    padding-bottom: 40px; /* Adjust the value as needed */
+    background-color: #f9f9f9;
 }
-.event-section h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #343a40;
+
+.events-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
-.card-horizontal {
-  display: flex;
-  flex: 1 1 auto;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease-in-out;
+
+.container {
+    display: flex;
+    justify-content: space-between;
 }
-.card-horizontal:hover {
-  transform: translateY(-5px);
+
+.event-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 240px;
+    height: 350px;
+    margin: 0 10px;
 }
-.card-horizontal .card-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
-.card-horizontal .card-body {
-  padding: 1.25rem;
+
+.event-details {
+    padding: 16px;
 }
-.card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
+
+.event-details .date {
+    font-size: 14px;
+    font-weight: bold;
+    color: #999;
+    margin: 0;
 }
-.card-text {
-  color: #6c757d;
+
+.event-details h3 {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.event-details p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.event-details .time {
+    font-weight: bold;
+}
+
+.more-events-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-events-btn {
+    background-color: #a50000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
   </style>
 </head>
+
 <body>
   <!-- Header -->
   <header>
@@ -386,7 +483,7 @@
   <div class="hero">
     <div>
       <h1>Air University</h1>
-      <button  class="btn ">Explore Air</button>
+      <button class="btn ">Explore Air</button>
     </div>
   </div>
   <!-- Mission Statement Section -->
@@ -497,13 +594,13 @@
     <section class="academic-areas">
       <h1 style="font-weight: bold;">Seven schools in which to pursue your passion</h1>
       <div>
-        <a href="#"style="color:#BD0000;">Medicine</a> |
-        <a href="#"style="color:#BD0000;">Law</a> |
-        <a href="#"style="color:#BD0000;">Engineering</a> |
-        <a href="#"style="color:#BD0000;">Business</a> |
-        <a href="#"style="color:#BD0000;">Education</a> |
-        <a href="#"style="color:#BD0000;">Humanities & Sciences</a> |
-        <a href="#"style="color:#BD0000;">Earth & Energy</a>
+        <a href="#" style="color:#BD0000;">Medicine</a> |
+        <a href="#" style="color:#BD0000;">Law</a> |
+        <a href="#" style="color:#BD0000;">Engineering</a> |
+        <a href="#" style="color:#BD0000;">Business</a> |
+        <a href="#" style="color:#BD0000;">Education</a> |
+        <a href="#" style="color:#BD0000;">Humanities & Sciences</a> |
+        <a href="#" style="color:#BD0000;">Earth & Energy</a>
       </div>
       <button class="more-about-academics">More About Academics</button>
     </section>
@@ -522,66 +619,49 @@
         </div>
       </div>
     </section>
-    <section id="event" class="event-section">
-      <h1>Upcoming Events</h1>
-      <br>
+    <section class="events-section">
+      <h2>Upcoming Events</h2>
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card-horizontal">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="https://th.bing.com/th/id/R.d756a66948c11a74fd37121a6e419e4c?rik=BxZA83CurOUPPw&riu=http%3a%2f%2fwww.bbc.co.uk%2fblogs%2flearningenglish%2fcricket_getty.jpg&ehk=J1s3rQ1P5Ih%2bb1oVfaXKecB9lATRYtuKQhLcjsZqDZA%3d&risl=&pid=ImgRaw&r=0" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title" style="color: #B00000;">Sports week</h5>
-                    <p class="card-text">08 november marks the dates.</p>
-                    <a href="#" class="btn btn-primary" style="color: #BD0000;">view more</a>
-                  </div>
-                </div>
+          <div class="event-card">
+              <img src="https://localist-images.azureedge.net/photos/45439829176291/square_300/b9be8d5c99a1837d0eceb241e1206b07fd8f76b8.jpg" alt="Educational Farm">
+              <div class="event-details">
+                  <p class="date">NOV 09</p>
+                  <h3>SOCIAL EVENT/RECEPTION</h3>
+                  <p>Volunteering at Stanford Educational Farm</p>
+                  <p class="time">09:30 AM PT</p>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card-horizontal">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="https://www.researchgate.net/profile/Limin-Wang-22/publication/275897285/figure/fig2/AS:294647306964995@1447260800513/Samples-of-cultural-event-recognition-dataset-at-the-ChaLearn-LAP-challenge-2015-The.png" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title" style="color:#BD0000;">Air nexus</h5>
-                    <p class="card-text">22 nov is the date.</p>
-                    <a href="#" class="btn btn-primary"style="color: #BD0000;">register here</a>
-                  </div>
-                </div>
+          <div class="event-card">
+              <img src="https://localist-images.azureedge.net/photos/47739087822349/square_300/8d1664ca6fbc9de1c93b376d64d0879e6a7272bb.jpg" alt="Spirit House">
+              <div class="event-details">
+                  <p class="date">NOV 09</p>
+                  <h3>TOUR</h3>
+                  <p>Public Tour | Spirit House</p>
+                  <p class="time">02:00 PM PT</p>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card-horizontal">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="https://www.kindpng.com/picc/m/638-6385644_air-university-islamabad-logo-clipart-png-download-air.png" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title" style="color: #BD0000;">MOU</h5>
-                    <p class="card-text">study in italy.</p>
-                    <a href="#" class="btn btn-primary"style="color: #BD0000;">view more</a>
-                  </div>
-                </div>
+          <div class="event-card">
+              <img src="https://localist-images.azureedge.net/photos/47968374647782/square_300/2b2bc4291c09a568cf0d638fbdca6a1901453df8.jpg" alt="Hazard Sign">
+              <div class="event-details">
+                  <p class="date">NOV 11</p>
+                  <h3>EXHIBITION</h3>
+                  <p>Branner Library Monthly Book & Map Exhibit - Naturally Hazardous: Impacts</p>
               </div>
-            </div>
           </div>
-        </div>
+          <div class="event-card">
+              <img src="https://localist-images.azureedge.net/photos/47978476619625/square_300/bb3cac39ae1f312d948c373a1d32402b55b05a00.jpg" alt="Veterans Day">
+              <div class="event-details">
+                  <p class="date">NOV 11</p>
+                  <h3>SOCIAL EVENT/RECEPTION</h3>
+                  <p>A Legacy of Loyalty and Service: Palo Alto-Stanford Veterans Day Event</p>
+                  <p class="time">03:00 PM PT</p>
+              </div>
+          </div>
       </div>
-    </section>
+      <div class="more-events-btn-container">
+          <button class="more-events-btn">More events</button>
+      </div>
+  </section>
   </main>
   <!-- Footer -->
   <footer>
@@ -590,4 +670,5 @@
     </p>
   </footer>
 </body>
+
 </html>
